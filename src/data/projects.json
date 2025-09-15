@@ -1,0 +1,123 @@
+[
+  {
+    "id": "replit",
+    "title": "Replit",
+    "slug": "replit",
+    "website": "https://replit.com",
+    "role": "Frontend re-design and performance optimization",
+    "description": "Implemented SSR routes, priority image loading, and realtime collaboration UX polishing",
+    "techStack": ["Next.js", "WebSocket", "React", "Tailwind", "Redis"],
+    "outcome": "30% faster FCP, improved new user signups by 18%",
+    "challenge": "Replit needed to improve their frontend performance and user onboarding experience to compete with emerging AI-powered coding platforms.",
+    "solution": "Redesigned the frontend architecture with SSR implementation, optimized image loading strategies, and enhanced real-time collaboration features.",
+    "image": "/images/case-studies/replit.jpg",
+    "category": "web-development",
+    "featured": true,
+    "metrics": {
+      "performance": "30% faster FCP",
+      "conversion": "18% increase in signups",
+      "satisfaction": "4.8/5 user rating"
+    }
+  },
+  {
+    "id": "docanalyzer",
+    "title": "DocAnalyzer",
+    "slug": "docanalyzer",
+    "website": "https://docanalyzer.ai",
+    "role": "Enterprise onboarding UI and document parsing pipeline",
+    "description": "Built enterprise onboarding UI, document parsing pipeline integration, multi-format uploads and secure SSO",
+    "techStack": ["Next.js", "Python", "AWS S3", "OAuth SAML"],
+    "outcome": "Reduced document processing time by 40%",
+    "challenge": "Enterprise clients needed a streamlined way to onboard large document repositories with secure access controls.",
+    "solution": "Created a comprehensive onboarding flow with multi-format document parsing, secure SSO integration, and automated processing pipelines.",
+    "image": "/images/case-studies/docanalyzer.jpg",
+    "category": "ai-ml",
+    "featured": true,
+    "metrics": {
+      "efficiency": "40% faster processing",
+      "adoption": "85% enterprise adoption rate",
+      "accuracy": "99.2% document parsing accuracy"
+    }
+  },
+  {
+    "id": "wispr-flow",
+    "title": "Wispr Flow",
+    "slug": "wispr-flow",
+    "website": "https://wisprflow.ai",
+    "role": "Voice-first conversion flow and real-time STT",
+    "description": "Voice-first conversion flow, improved dictation UX, and integrated real-time STT",
+    "techStack": ["WebRTC", "Next.js", "TensorFlow.js", "Mobile SDK"],
+    "outcome": "3x increase in daily active users in target cohort",
+    "challenge": "Users struggled with traditional text input methods for voice-to-text applications, leading to low engagement.",
+    "solution": "Developed a voice-first interface with real-time speech-to-text processing and seamless mobile SDK integration.",
+    "image": "/images/case-studies/wispr-flow.jpg",
+    "category": "ai-ml",
+    "featured": true,
+    "metrics": {
+      "engagement": "3x increase in DAU",
+      "retention": "67% weekly retention",
+      "accuracy": "95% speech recognition accuracy"
+    }
+  },
+  {
+    "id": "galen-ai",
+    "title": "Galen AI",
+    "slug": "galen-ai",
+    "website": "https://galenai.com",
+    "role": "Health-data dashboard and wearables integration",
+    "description": "Built health-data dashboard, wearables ingestion pipeline, secure patient data model",
+    "techStack": ["Next.js", "GraphQL", "Kafka", "HIPAA Infrastructure"],
+    "outcome": "Streamlined clinician workflows and cut data sync time by 65%",
+    "challenge": "Healthcare providers needed a unified platform to aggregate patient data from multiple wearables and health systems.",
+    "solution": "Created a HIPAA-compliant dashboard with real-time data ingestion, secure patient data modeling, and streamlined clinician workflows.",
+    "image": "/images/case-studies/galen-ai.jpg",
+    "category": "ai-ml",
+    "featured": true,
+    "metrics": {
+      "efficiency": "65% faster data sync",
+      "compliance": "100% HIPAA compliance",
+      "adoption": "92% clinician satisfaction"
+    }
+  },
+  {
+    "id": "plexe",
+    "title": "Plexe",
+    "slug": "plexe",
+    "website": "https://plexe.ai",
+    "role": "ML model management UI and deployment pipelines",
+    "description": "Designed ML model management UI, prompt editor, and model deployment pipelines",
+    "techStack": ["Next.js", "Docker", "Kubernetes", "LangChain"],
+    "outcome": "Faster model iteration cycles and improved MLops adoption",
+    "challenge": "AI teams needed a unified platform to manage, deploy, and iterate on machine learning models efficiently.",
+    "solution": "Built a comprehensive MLops platform with model management UI, prompt editing capabilities, and automated deployment pipelines.",
+    "image": "/images/case-studies/plexe.jpg",
+    "category": "ai-ml",
+    "featured": true,
+    "metrics": {
+      "speed": "50% faster model iteration",
+      "adoption": "78% MLops adoption rate",
+      "efficiency": "40% reduction in deployment time"
+    }
+  },
+  {
+    "id": "tasawwur-rtc",
+    "title": "Tasawwur RTC",
+    "slug": "tasawwur-rtc",
+    "website": "https://github.com/tassawwur/tasawwur-rtc",
+    "role": "Full-stack Real-Time Communication Platform",
+    "description": "High-performance, open-source RTC platform with sub-200ms latency, built with WebRTC, Kotlin/C++, and Java Spring Boot",
+    "techStack": ["Kotlin", "C++", "Java", "Spring Boot", "WebRTC", "Kubernetes", "PostgreSQL"],
+    "outcome": "Sub-200ms latency with <5MB SDK footprint",
+    "challenge": "Building low-latency, reliable video calling is a massive engineering challenge that requires deep expertise in distributed systems and real-time communication.",
+    "solution": "Created a comprehensive RTC platform with Android SDK, scalable backend services, and developer-friendly APIs that handle all the complexity.",
+    "image": "/images/case-studies/tasawwur-rtc.jpg",
+    "category": "open-source",
+    "featured": true,
+    "metrics": {
+      "latency": "<200ms glass-to-glass",
+      "sdk_size": "<5MB footprint",
+      "cpu_usage": "<15% on mid-range devices",
+      "scalability": "10,000+ concurrent users"
+    }
+  }
+]

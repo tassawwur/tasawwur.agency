@@ -1,0 +1,142 @@
+[
+  {
+    "id": "web-development",
+    "title": "Web Development",
+    "slug": "web-development",
+    "description": "Modern, performant web applications built with cutting-edge technologies",
+    "icon": "Globe",
+    "features": [
+      "Next.js & React applications",
+      "Server-side rendering (SSR)",
+      "Progressive Web Apps (PWA)",
+      "Real-time collaboration features",
+      "Performance optimization",
+      "SEO & accessibility compliance"
+    ],
+    "problem": "Your business needs a web presence that converts visitors into customers while providing exceptional user experience.",
+    "solution": "We build fast, scalable web applications using modern frameworks like Next.js, optimized for performance and user engagement.",
+    "deliverables": [
+      "Responsive web application",
+      "Performance optimization report",
+      "SEO audit and implementation",
+      "Accessibility compliance report",
+      "Deployment and hosting setup",
+      "3 months of support and maintenance"
+    ],
+    "timeline": "6-12 weeks",
+    "priceRange": "$15,000 - $50,000",
+    "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "PostgreSQL"]
+  },
+  {
+    "id": "llm-engineering",
+    "title": "LLM Engineering",
+    "slug": "llm-engineering",
+    "description": "Custom Large Language Model solutions and AI-powered applications",
+    "icon": "Brain",
+    "features": [
+      "Custom LLM fine-tuning",
+      "RAG (Retrieval Augmented Generation)",
+      "Vector database integration",
+      "Prompt engineering",
+      "AI agent development",
+      "Model optimization & deployment"
+    ],
+    "problem": "You need intelligent AI solutions that understand your domain and provide accurate, contextual responses.",
+    "solution": "We engineer custom LLM solutions tailored to your specific use case, from fine-tuning to full-stack AI applications.",
+    "deliverables": [
+      "Custom LLM model or API integration",
+      "Vector database setup",
+      "RAG implementation",
+      "Prompt optimization library",
+      "Performance benchmarks",
+      "Integration documentation"
+    ],
+    "timeline": "8-16 weeks",
+    "priceRange": "$25,000 - $100,000",
+    "techStack": ["Python", "LangChain", "OpenAI", "Pinecone", "FastAPI", "Docker"]
+  },
+  {
+    "id": "ai-ml",
+    "title": "AI/ML Solutions",
+    "slug": "ai-ml",
+    "description": "Machine learning models and AI-powered automation systems",
+    "icon": "Zap",
+    "features": [
+      "Computer vision models",
+      "Natural language processing",
+      "Predictive analytics",
+      "Automated decision systems",
+      "Data pipeline development",
+      "Model monitoring & maintenance"
+    ],
+    "problem": "Your business processes could be automated and optimized using artificial intelligence and machine learning.",
+    "solution": "We develop custom AI/ML solutions that automate workflows, provide insights, and enhance decision-making capabilities.",
+    "deliverables": [
+      "Trained ML models",
+      "Data processing pipeline",
+      "API endpoints for model inference",
+      "Model monitoring dashboard",
+      "Performance metrics & reports",
+      "Integration and deployment guide"
+    ],
+    "timeline": "10-20 weeks",
+    "priceRange": "$30,000 - $150,000",
+    "techStack": ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "MLflow", "Kubernetes"]
+  },
+  {
+    "id": "app-development",
+    "title": "App Development",
+    "slug": "app-development",
+    "description": "Native and cross-platform mobile applications",
+    "icon": "Smartphone",
+    "features": [
+      "iOS & Android native apps",
+      "React Native cross-platform",
+      "Flutter applications",
+      "App Store optimization",
+      "Push notifications",
+      "Offline functionality"
+    ],
+    "problem": "You need a mobile presence that provides native performance and seamless user experience across devices.",
+    "solution": "We develop high-performance mobile applications using native and cross-platform technologies, optimized for user engagement.",
+    "deliverables": [
+      "Native or cross-platform mobile app",
+      "App Store & Play Store deployment",
+      "Push notification setup",
+      "Analytics integration",
+      "User authentication system",
+      "App maintenance plan"
+    ],
+    "timeline": "12-24 weeks",
+    "priceRange": "$20,000 - $80,000",
+    "techStack": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Expo"]
+  },
+  {
+    "id": "software-architecture",
+    "title": "Software Architecture",
+    "slug": "software-architecture",
+    "description": "Scalable system design and technical architecture consulting",
+    "icon": "Layers",
+    "features": [
+      "System architecture design",
+      "Microservices implementation",
+      "Cloud infrastructure setup",
+      "Database design & optimization",
+      "Security architecture",
+      "Performance monitoring"
+    ],
+    "problem": "Your system needs to scale efficiently while maintaining security, performance, and reliability.",
+    "solution": "We design and implement robust software architectures that can handle growth while maintaining high performance and security standards.",
+    "deliverables": [
+      "System architecture documentation",
+      "Infrastructure setup",
+      "Database schema design",
+      "Security implementation",
+      "Performance monitoring setup",
+      "Scaling strategy & roadmap"
+    ],
+    "timeline": "4-12 weeks",
+    "priceRange": "$15,000 - $60,000",
+    "techStack": ["AWS", "Docker", "Kubernetes", "PostgreSQL", "Redis", "Terraform"]
+  }
+]

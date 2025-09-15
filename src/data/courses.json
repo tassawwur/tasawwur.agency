@@ -1,0 +1,106 @@
+[
+  {
+    "id": "gsoc-prep",
+    "title": "GSoC Preparation Course",
+    "slug": "gsoc-prep",
+    "description": "Practical, mentor-led course preparing contributors to land Google Summer of Code",
+    "shortDescription": "Comprehensive hands-on mentorship with exact explicit steps to ensure your selection at GSoC",
+    "instructor": "Tassawwur Hussain",
+    "duration": "12 weeks",
+    "price": {
+      "monthly": 6000,
+      "full": 35000,
+      "currency": "PKR"
+    },
+    "whatsappContact": "+923156293975",
+    "features": [
+      "Weekly mentorship sessions",
+      "Mock PR reviews and feedback",
+      "Open source contribution guidance",
+      "GSoC application optimization",
+      "Technical interview preparation",
+      "Community building strategies"
+    ],
+    "syllabus": [
+      {
+        "week": 1,
+        "title": "Introduction to Open Source",
+        "topics": ["Git basics", "Open source ecosystem", "GSoC program overview"]
+      },
+      {
+        "week": 2,
+        "title": "Finding the Right Project",
+        "topics": ["Project evaluation criteria", "Community assessment", "Skill matching"]
+      },
+      {
+        "week": 3,
+        "title": "First Contributions",
+        "topics": ["Good first issues", "Pull request workflow", "Code review process"]
+      },
+      {
+        "week": 4,
+        "title": "Building Relationships",
+        "topics": ["Community engagement", "Mentor communication", "Networking strategies"]
+      },
+      {
+        "week": 5,
+        "title": "Technical Skills Development",
+        "topics": ["Programming languages", "Frameworks", "Tools and technologies"]
+      },
+      {
+        "week": 6,
+        "title": "Project Proposal Writing",
+        "topics": ["Proposal structure", "Timeline planning", "Deliverable definition"]
+      },
+      {
+        "week": 7,
+        "title": "Mock Applications",
+        "topics": ["Practice applications", "Feedback sessions", "Iteration process"]
+      },
+      {
+        "week": 8,
+        "title": "Technical Interviews",
+        "topics": ["Interview preparation", "Mock interviews", "Problem-solving strategies"]
+      },
+      {
+        "week": 9,
+        "title": "Final Application",
+        "topics": ["Application review", "Final submission", "Follow-up strategies"]
+      },
+      {
+        "week": 10,
+        "title": "Post-Application",
+        "topics": ["Waiting period activities", "Backup plans", "Continued contributions"]
+      },
+      {
+        "week": 11,
+        "title": "Selection Results",
+        "topics": ["Result analysis", "Next steps", "Celebration and planning"]
+      },
+      {
+        "week": 12,
+        "title": "GSoC Program Start",
+        "topics": ["Program orientation", "Timeline management", "Success strategies"]
+      }
+    ],
+    "outcomes": [
+      "Increased confidence in open source contributions",
+      "Improved technical skills and coding practices",
+      "Better understanding of GSoC application process",
+      "Stronger community connections and networking",
+      "Higher chances of GSoC selection",
+      "Valuable mentorship experience"
+    ],
+    "prerequisites": [
+      "Basic programming knowledge",
+      "Git and GitHub familiarity",
+      "Commitment to 12-week program",
+      "Passion for open source contribution"
+    ],
+    "enrollment": {
+      "process": "WhatsApp contact for enrollment",
+      "contact": "+923156293975",
+      "paymentOptions": ["Monthly: PKR 6,000", "Full Course: PKR 35,000"]
+    }
+  }
+]
