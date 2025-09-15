@@ -1,10 +1,6 @@
-import type { Metadata } from 'next'
-import { motion } from 'framer-motion'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy - tasawwur.agency',
-  description: 'Learn how tasawwur.agency collects, uses, and protects your personal information.',
-}
+import { motion } from 'framer-motion'
 
 export default function PrivacyPage() {
   return (

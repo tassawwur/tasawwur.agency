@@ -1,10 +1,6 @@
-import type { Metadata } from 'next'
-import { motion } from 'framer-motion'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Terms of Service - tasawwur.agency',
-  description: 'Read our terms of service for using tasawwur.agency website and services.',
-}
+import { motion } from 'framer-motion'
 
 export default function TermsPage() {
   return (

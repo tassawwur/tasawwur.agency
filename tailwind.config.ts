@@ -10,7 +10,6 @@ module.exports = {
       colors: {
         // Celestial Light palette
         background: 'var(--bg)',
-        muted: 'var(--muted)',
         pearl: 'var(--pearl)',
         foreground: 'var(--text)',
         'accent-teal': 'var(--accent-teal)',

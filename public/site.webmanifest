@@ -1,0 +1,10 @@
+{
+  "name": "tasawwur.agency",
+  "short_name": "tasawwur",
+  "description": "Software Engineering & AI Solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": []
+}
