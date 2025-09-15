@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'TypeScript',
     'AI consulting'
   ],
-  authors: [{ name: 'Tassawwur Hussain', email: 'tassawwurhussain@tasawwur.agency' }],
+  authors: [{ name: 'Tassawwur Hussain' }],
   creator: 'Tassawwur Hussain',
   publisher: 'tasawwur.agency',
   robots: {
