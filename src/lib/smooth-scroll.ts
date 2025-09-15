@@ -37,7 +37,7 @@ export function initSmoothScroll() {
 export function scrollToElement(selector: string, offset = 0) {
   if (typeof window === 'undefined' || !lenis) return
 
-  const element = document.querySelector(selector)
+  const element = document.querySelector(selector) as HTMLElement
   if (element) {
     lenis.scrollTo(element, {
       offset,
