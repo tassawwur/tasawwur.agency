@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowLeft, ExternalLink, Github, Code, Zap, Cloud, Cpu, Smartphone, Database, Layers, Users } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Github, Code, Zap, Cloud, Cpu, Smartphone, Database, Layers, Users, Key, BarChart3, Settings, Download, Play, Shield, Clock, Globe, CheckCircle, Star, ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
@@ -38,6 +38,83 @@ const techStack = [
   { name: 'Google Cloud', icon: '☁️' }
 ]
 
+const dashboardFeatures = [
+  {
+    icon: Key,
+    title: 'API Key Management',
+    description: 'Generate, manage, and rotate API keys for secure access to Tasawwur RTC services.',
+    action: 'Manage Keys'
+  },
+  {
+    icon: BarChart3,
+    title: 'Usage Analytics',
+    description: 'Track your video call minutes, concurrent users, and performance metrics in real-time.',
+    action: 'View Analytics'
+  },
+  {
+    icon: Settings,
+    title: 'Project Settings',
+    description: 'Configure your RTC settings, webhooks, and integration preferences.',
+    action: 'Configure'
+  },
+  {
+    icon: Download,
+    title: 'SDK Downloads',
+    description: 'Download the latest Android SDK and access comprehensive documentation.',
+    action: 'Download SDK'
+  }
+]
+
+const pricingPlans = [
+  {
+    name: 'Free Tier',
+    price: '$0',
+    period: '/month',
+    description: 'Perfect for development and testing',
+    features: [
+      '1,000 minutes/month',
+      'Up to 10 concurrent users',
+      'Basic analytics',
+      'Community support',
+      'Android SDK access'
+    ],
+    cta: 'Get Started Free',
+    popular: false
+  },
+  {
+    name: 'Pro',
+    price: '$99',
+    period: '/month',
+    description: 'Ideal for growing applications',
+    features: [
+      '10,000 minutes/month',
+      'Up to 100 concurrent users',
+      'Advanced analytics',
+      'Priority support',
+      'Webhook integrations',
+      'Custom branding'
+    ],
+    cta: 'Start Pro Trial',
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'For large-scale deployments',
+    features: [
+      'Unlimited minutes',
+      'Unlimited concurrent users',
+      'Custom analytics',
+      '24/7 dedicated support',
+      'On-premise deployment',
+      'SLA guarantee'
+    ],
+    cta: 'Contact Sales',
+    popular: false
+  }
+]
+
 export default function TasawwurRTCPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sage/30 via-pure-white to-sage/20">
@@ -70,21 +147,18 @@ export default function TasawwurRTCPage() {
                 </div>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-emerald mb-6">
-                Build Real-Time Video into Your Android App in Minutes
+                Tasawwur RTC Dashboard
               </h1>
               <p className="text-lg sm:text-xl text-leaf mb-8 leading-relaxed max-w-3xl mx-auto">
-                Tasawwur RTC is a high-performance, open-source Real-Time Communication (RTC) platform and SDK for developers, built with WebRTC, Kotlin/C++, and Java.
+                The official developer platform for Tasawwur RTC. Sign up, get API keys, and manage your real-time video calling infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
-                  asChild
                   size="lg"
                   className="bg-emerald hover:bg-emerald/90 text-white px-8 py-4 text-lg"
                 >
-                  <Link href="https://github.com/tassawwur/tasawwur-rtc" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                    <Github className="w-5 h-5" />
-                    <span>View on GitHub</span>
-                  </Link>
+                  <Users className="w-5 h-5 mr-2" />
+                  <span>Sign Up for Free</span>
                 </Button>
                 <Button
                   asChild
@@ -92,9 +166,9 @@ export default function TasawwurRTCPage() {
                   size="lg"
                   className="border-2 border-emerald text-emerald hover:bg-emerald hover:text-white px-8 py-4 text-lg"
                 >
-                  <Link href="https://github.com/tassawwur/tasawwur-rtc#readme" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                    <ExternalLink className="w-5 h-5" />
-                    <span>Read the Docs</span>
+                  <Link href="https://github.com/tassawwur/tasawwur-rtc" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                    <Github className="w-5 h-5" />
+                    <span>View on GitHub</span>
                   </Link>
                 </Button>
               </div>
@@ -103,45 +177,92 @@ export default function TasawwurRTCPage() {
         </div>
       </section>
 
-      {/* Problem & Solution Section */}
+      {/* Quick Start Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
+              Get Started in Minutes
+            </h2>
+            <p className="text-lg text-leaf max-w-3xl mx-auto">
+              Follow these simple steps to integrate Tasawwur RTC into your Android app
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
-                Complex Tech, Simple Solution
-              </h2>
-              <p className="text-lg text-leaf leading-relaxed">
-                Building low-latency, reliable video calling is a massive engineering challenge. Tasawwur RTC provides a simple, powerful SDK that handles all the complexity, allowing developers to focus on creating amazing user experiences.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-emerald/20 to-leaf/20 rounded-2xl p-8 h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mb-4">
-                    <Smartphone className="w-12 h-12 text-white" />
+              <Card className="text-center h-full border-0 bg-pure-white/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-emerald font-semibold">Real-time Video Calling</p>
-                  <p className="text-leaf text-sm">Powered by Helios RTC</p>
-                </div>
-              </div>
+                  <CardTitle className="text-xl font-semibold text-emerald">1. Create Account</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-leaf">
+                    Sign up for a free account and verify your email address to get started.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Card className="text-center h-full border-0 bg-pure-white/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Key className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-emerald">2. Get API Keys</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-leaf">
+                    Create a new project and generate your App ID and App Secret for authentication.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <Card className="text-center h-full border-0 bg-pure-white/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Code className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-emerald">3. Integrate SDK</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-leaf">
+                    Download the Android SDK and follow our integration guide to add video calling.
+                  </CardDescription>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Key Features Section */}
+      {/* Dashboard Features Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald/10 to-leaf/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -152,15 +273,15 @@ export default function TasawwurRTCPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
-              Key Features
+              Dashboard Features
             </h2>
             <p className="text-lg text-leaf max-w-3xl mx-auto">
-              The most impressive technical achievements in a developer-friendly package
+              Everything you need to manage your RTC infrastructure in one place
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {dashboardFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
                 <motion.div
@@ -170,9 +291,9 @@ export default function TasawwurRTCPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full text-center hover:shadow-large transition-all duration-300 group border-0 bg-white/50 backdrop-blur-sm">
+                  <Card className="h-full hover:shadow-large transition-all duration-300 group border-0 bg-pure-white/80 backdrop-blur-sm">
                     <CardHeader>
-                      <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <CardTitle className="text-xl font-semibold text-emerald">
@@ -180,9 +301,16 @@ export default function TasawwurRTCPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-leaf">
+                      <CardDescription className="text-leaf mb-4">
                         {feature.description}
                       </CardDescription>
+                      <Button
+                        variant="outline"
+                        className="group-hover:bg-emerald group-hover:text-white group-hover:border-emerald transition-all duration-300"
+                      >
+                        {feature.action}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -192,67 +320,8 @@ export default function TasawwurRTCPage() {
         </div>
       </section>
 
-      {/* Architecture Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
-              Built for Performance and Scale
-            </h2>
-            <p className="text-lg text-leaf max-w-3xl mx-auto">
-              A comprehensive architecture designed for enterprise-grade performance and scalability
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-emerald/10 to-leaf/10 rounded-3xl p-8 lg:p-12"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-emerald mb-2">Android SDK</h3>
-                <p className="text-sm text-leaf">Kotlin + C++ + WebRTC</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Cloud className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-emerald mb-2">Signaling Server</h3>
-                <p className="text-sm text-leaf">Java Spring Boot</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Layers className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-emerald mb-2">Kubernetes</h3>
-                <p className="text-sm text-leaf">Scalable Infrastructure</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-emerald mb-2">Database</h3>
-                <p className="text-sm text-leaf">PostgreSQL + Redis</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Code Integration Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald/10 to-leaf/10">
+      <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -303,8 +372,128 @@ That's it! You now have video calling in your Android app.`}</code>
         </div>
       </section>
 
-      {/* Technology Stack Section */}
+      {/* Pricing Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald/10 to-leaf/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
+              Choose Your Plan
+            </h2>
+            <p className="text-lg text-leaf max-w-3xl mx-auto">
+              Start free and scale as you grow. No hidden fees, no surprises.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className={`h-full relative border-0 ${plan.popular ? 'bg-emerald/5 border-2 border-emerald' : 'bg-pure-white/80'} backdrop-blur-sm`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-emerald text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-2xl font-bold text-emerald mb-2">
+                      {plan.name}
+                    </CardTitle>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-emerald">{plan.price}</span>
+                      <span className="text-leaf">{plan.period}</span>
+                    </div>
+                    <CardDescription className="text-leaf">
+                      {plan.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center space-x-3">
+                          <CheckCircle className="w-5 h-5 text-emerald flex-shrink-0" />
+                          <span className="text-leaf">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      className={`w-full ${plan.popular ? 'bg-emerald hover:bg-emerald/90' : 'bg-leaf hover:bg-leaf/90'} text-white`}
+                    >
+                      {plan.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
       <section className="py-20 lg:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
+              Why Choose Tasawwur RTC?
+            </h2>
+            <p className="text-lg text-leaf max-w-3xl mx-auto">
+              The most impressive technical achievements in a developer-friendly package
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full text-center hover:shadow-large transition-all duration-300 group border-0 bg-pure-white/80 backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-gradient-to-br from-emerald to-leaf rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-semibold text-emerald">
+                        {feature.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-leaf">
+                        {feature.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald/10 to-leaf/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -342,7 +531,7 @@ That's it! You now have video calling in your Android app.`}</code>
       </section>
 
       {/* About Creator Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald/10 to-leaf/10">
+      <section className="py-20 lg:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -383,7 +572,7 @@ That's it! You now have video calling in your Android app.`}</code>
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-emerald/10 to-leaf/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -393,21 +582,18 @@ That's it! You now have video calling in your Android app.`}</code>
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-emerald mb-6">
-              Ready to Dive In?
+              Ready to Build Amazing Video Experiences?
             </h2>
             <p className="text-lg text-leaf mb-8">
-              Explore the code, contribute to the project, or integrate it into your next Android app
+              Join thousands of developers who trust Tasawwur RTC for their real-time communication needs
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
-                asChild
                 size="lg"
                 className="bg-emerald hover:bg-emerald/90 text-white px-8 py-4 text-lg"
               >
-                <Link href="https://github.com/tassawwur/tasawwur-rtc" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                  <Github className="w-5 h-5" />
-                  <span>Explore the Code on GitHub</span>
-                </Link>
+                <Users className="w-5 h-5 mr-2" />
+                <span>Get Started Free</span>
               </Button>
               <Button
                 asChild
@@ -415,9 +601,9 @@ That's it! You now have video calling in your Android app.`}</code>
                 size="lg"
                 className="border-2 border-emerald text-emerald hover:bg-emerald hover:text-white px-8 py-4 text-lg"
               >
-                <Link href="https://github.com/tassawwur/tasawwur-rtc#readme" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                  <ExternalLink className="w-5 h-5" />
-                  <span>Read the Documentation</span>
+                <Link href="https://github.com/tassawwur/tasawwur-rtc" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                  <Github className="w-5 h-5" />
+                  <span>View Documentation</span>
                 </Link>
               </Button>
             </div>

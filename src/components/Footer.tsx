@@ -52,10 +52,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
                 <a 
-                  href="mailto:tassawwurhussain@tasawwur.agency"
+                  href="mailto:tasawwur@tasawwur.agency"
                   className="hover:text-accent-teal transition-colors"
                 >
-                  tassawwurhussain@tasawwur.agency
+                  tasawwur@tasawwur.agency
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
@@ -174,3 +174,4 @@ export default function Footer() {
     </footer>
   )
 }
+

@@ -12,8 +12,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email',
     description: 'Send us an email anytime',
-    value: 'tassawwurhussain@tasawwur.agency',
-    href: 'mailto:tassawwurhussain@tasawwur.agency'
+    value: 'tasawwur@tasawwur.agency',
+    href: 'mailto:tasawwur@tasawwur.agency'
   },
   {
     icon: Phone,

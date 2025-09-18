@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Users, Target, Zap, Heart, Award, Globe, Code, Brain } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -244,10 +245,14 @@ export default function AboutPage() {
                 <Card className="border-0 bg-muted/30 backdrop-blur-sm">
                   <CardContent className="p-8">
                     <div className="text-center">
-                      <div className="w-24 h-24 bg-gradient-to-br from-accent-teal to-accent-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-2xl font-bold text-white">
-                          {member.name.split(' ').map(n => n[0]).join('')}
-                        </span>
+                      <div className="w-24 h-24 mx-auto mb-6">
+                        <Image
+                          src="/images/tasawwur2.jpg"
+                          alt={member.name}
+                          width={96}
+                          height={96}
+                          className="rounded-full object-cover w-full h-full"
+                        />
                       </div>
                       <h3 className="text-2xl font-bold text-foreground mb-2">
                         {member.name}

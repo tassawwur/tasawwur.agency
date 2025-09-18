@@ -73,7 +73,7 @@ Sent from tasawwur.agency contact form
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     
     const msg = {
-      to: 'tassawwurhussain@tasawwur.agency',
+      to: 'tasawwur@tasawwur.com',
       from: 'noreply@tasawwur.agency',
       subject: `New Contact Form Submission from ${name}`,
       text: emailContent,
@@ -119,3 +119,4 @@ Sent from tasawwur.agency contact form
     )
   }
 }
+

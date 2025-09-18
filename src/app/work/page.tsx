@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, ExternalLink, Github, BookOpen, Code, Star, Users } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -101,10 +102,19 @@ export default function WorkPage() {
               >
                 <Card className="h-full hover:shadow-large transition-all duration-300 group border-0 bg-pure-white/80 backdrop-blur-sm overflow-hidden">
                   <div className="relative h-48 bg-gradient-to-br from-emerald/20 to-leaf/20">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-4xl font-bold text-emerald opacity-50">
-                        {project.title.charAt(0)}
-                      </div>
+                    <div className="absolute inset-0 flex items-center justify-center p-8">
+                      <Image
+                        src={`/images/logos/${project.id === 'replit' ? 'Replit_Logo.jpg' : 
+                                         project.id === 'docanalyzer' ? 'docanalyzer.png' :
+                                         project.id === 'wispr-flow' ? 'Wispr_Flow_Logo.jpg' :
+                                         project.id === 'galen-ai' ? 'Galen_AI_Logo.png' :
+                                         project.id === 'plexe' ? 'Plexe-logo.jpg' :
+                                         project.id === 'tasawwur-rtc' ? 'tasawwur-rtc.png' : 'docanalyzer.png'}`}
+                        alt={`${project.title} logo`}
+                        width={200}
+                        height={100}
+                        className="object-contain max-h-24 w-auto"
+                      />
                     </div>
                     <div className="absolute top-4 right-4">
                       <Link

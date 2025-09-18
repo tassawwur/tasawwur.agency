@@ -21,10 +21,10 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>
 
 const budgetRanges = [
-  '$10,000 - $25,000',
-  '$25,000 - $50,000',
-  '$50,000 - $100,000',
-  '$100,000+',
+  '$300 - $1,000',
+  '$1,000 - $2,500',
+  '$2,500 - $5,000',
+  '$5,000+',
   'Not sure yet'
 ]
 
@@ -340,10 +340,11 @@ export default function ContactForm() {
             <span className="font-medium">Error sending message</span>
           </div>
           <p className="mt-1 text-sm text-red-500">
-            Please try again or contact us directly at tassawwurhussain@tasawwur.agency
+            Please try again or contact us directly at tasawwur@tasawwur.agency
           </p>
         </motion.div>
       )}
     </form>
   )
 }
+

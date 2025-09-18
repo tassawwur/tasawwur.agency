@@ -46,7 +46,9 @@ export default function CaseStudiesSection() {
                       src={`/images/logos/${project.id === 'replit' ? 'Replit_Logo.jpg' : 
                                        project.id === 'docanalyzer' ? 'docanalyzer.png' :
                                        project.id === 'wispr-flow' ? 'Wispr_Flow_Logo.jpg' :
-                                       project.id === 'galen-ai' ? 'Galen_AI_Logo.png' : 'docanalyzer.png'}`}
+                                       project.id === 'galen-ai' ? 'Galen_AI_Logo.png' :
+                                       project.id === 'plexe' ? 'Plexe-logo.jpg' :
+                                       project.id === 'tasawwur-rtc' ? 'tasawwur-rtc.png' : 'docanalyzer.png'}`}
                       alt={`${project.title} logo`}
                       width={200}
                       height={100}
