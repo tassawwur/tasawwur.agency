@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { SmoothScrollProvider } from '@/components/SmoothScrollProvider'
+import StructuredData from '@/components/StructuredData'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,6 +19,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tasawwur.agency'),
   title: {
     default: 'tasawwur.agency - Premier Software Development Agency | Web Apps, AI/ML, Mobile Development',
     template: '%s | tasawwur.agency - Leading Software Development Agency',
@@ -151,6 +153,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
+        <StructuredData />
         <SmoothScrollProvider>
           <Header />
           <main className="pt-16 lg:pt-20">

@@ -5,6 +5,7 @@ import { ArrowRight, BookOpen, Users, Clock, Star, CheckCircle, MessageCircle } 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import coursesData from '@/data/courses.json'
+import GSoCSEOSection from '@/components/GSoCSEOSection'
 
 
 export default function GSoCPrepCoursePageClient() {
@@ -258,6 +259,9 @@ export default function GSoCPrepCoursePageClient() {
           </div>
         </div>
       </section>
+
+      {/* GSoC SEO Section */}
+      <GSoCSEOSection />
 
       {/* Contact Section */}
       <section className="py-20 lg:py-32">

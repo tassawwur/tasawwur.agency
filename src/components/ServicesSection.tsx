@@ -27,10 +27,11 @@ export default function ServicesSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our Services
+            Software Development Services | Web Development Company
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive software engineering solutions tailored to your business needs
+            Expert software development agency offering web development, mobile app development, 
+            AI/ML solutions, and LLM engineering services. Trusted by startups and enterprises worldwide.
           </p>
         </motion.div>
 

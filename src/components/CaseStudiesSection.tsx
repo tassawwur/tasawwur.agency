@@ -22,10 +22,11 @@ export default function CaseStudiesSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Featured Case Studies
+            Software Development Case Studies | Web Development Portfolio
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from innovative startups we've helped scale and succeed
+            Proven results from our software development projects. See how our web development 
+            agency helped startups and enterprises achieve success with custom software solutions.
           </p>
         </motion.div>
 

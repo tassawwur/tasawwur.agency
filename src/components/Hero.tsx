@@ -37,19 +37,18 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            We build software that{' '}
+            Premier{' '}
             <span className="bg-gradient-to-r from-accent-teal to-accent-blue bg-clip-text text-transparent">
-              lasts
+              Software Development Agency
             </span>
-            ,{' '}
+            {' '}for{' '}
             <span className="bg-gradient-to-r from-accent-blue to-gold bg-clip-text text-transparent">
-              performs
+              Web Development
             </span>
-            , and{' '}
+            {' '}&{' '}
             <span className="bg-gradient-to-r from-gold to-accent-teal bg-clip-text text-transparent">
-              elevates
+              AI Solutions
             </span>
-            .
           </motion.h1>
 
           {/* Subheadline */}
@@ -59,8 +58,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Web apps, LLM systems, AI solutions, and mobile apps. Fast, secure, 
-            architected for scale, designed for humans.
+            Expert web development company specializing in mobile app development, 
+            AI/ML solutions, and LLM engineering. Trusted by startups and enterprises worldwide.
           </motion.p>
 
           {/* CTAs */}

@@ -44,10 +44,11 @@ export default function ProofSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-maroon mb-6">
-            What Our Clients Say
+            Client Testimonials | Software Development Agency Reviews
           </h2>
           <p className="text-lg sm:text-xl text-musk-dark max-w-3xl mx-auto">
-            Real feedback from founders and CTOs who trust us with their most critical projects
+            Real client reviews and testimonials from founders and CTOs who chose our software 
+            development agency for their web development and AI/ML projects.
           </p>
         </motion.div>
 

@@ -4,10 +4,11 @@ import ServicesSection from '@/components/ServicesSection'
 import CaseStudiesSection from '@/components/CaseStudiesSection'
 import ProofSection from '@/components/ProofSection'
 import HowWeWorkSection from '@/components/HowWeWorkSection'
+import SEOSection from '@/components/SEOSection'
 
 export const metadata: Metadata = {
-  title: 'Premier Software Development Agency | Web Apps, AI/ML, Mobile Development',
-  description: 'Leading software development agency specializing in web applications, AI/ML solutions, mobile apps, and LLM engineering. Expert developers delivering scalable, high-performance software solutions for startups and enterprises.',
+  title: 'Best Software Development Agency | Web Development Company | AI/ML Solutions',
+  description: 'Top-rated software development agency offering web development, mobile app development, AI/ML solutions, and LLM engineering services. Trusted by startups and enterprises worldwide. Get your project started today!',
   keywords: [
     'software development agency',
     'web development company',
@@ -58,6 +59,7 @@ export default function HomePage() {
       <ServicesSection />
       <CaseStudiesSection />
       <ProofSection />
+      <SEOSection />
       <HowWeWorkSection />
     </>
   )

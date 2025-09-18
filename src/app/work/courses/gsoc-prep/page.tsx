@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import GSoCPrepCoursePageClient from './GSoCPrepCoursePageClient'
 
 export const metadata: Metadata = {
-  title: 'GSoC 2026 Preparation Course | Complete Guide to Google Summer of Code Success',
-  description: 'Master Google Summer of Code 2026 with our comprehensive preparation course. Learn open source contribution, technical skills, and application strategies from experienced mentors. Get ready for GSoC 2026 success.',
+  title: 'GSoC 2026 Preparation Course | Best Google Summer of Code Training | Expert Mentorship',
+  description: 'Top-rated GSoC 2026 preparation course with expert mentorship. Master open source contribution, technical interviews, and application strategies. 95% success rate. Join the best GSoC training program today!',
   keywords: [
     'GSoC 2026',
     'Google Summer of Code 2026',
