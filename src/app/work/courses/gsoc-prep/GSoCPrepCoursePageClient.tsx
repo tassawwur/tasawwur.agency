@@ -76,11 +76,11 @@ export default function GSoCPrepCoursePageClient() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Users className="w-5 h-5 text-emerald" />
-                  <span className="text-leaf">Format: {course.format}</span>
+                  <span className="text-leaf">Instructor: {course.instructor}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Star className="w-5 h-5 text-emerald" />
-                  <span className="text-leaf">Level: {course.level}</span>
+                  <span className="text-leaf">Format: Online Mentorship</span>
                 </div>
               </div>
             </motion.div>
@@ -171,7 +171,7 @@ export default function GSoCPrepCoursePageClient() {
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
-            {course.curriculum.map((week, index) => (
+            {course.syllabus.map((week, index) => (
               <motion.div
                 key={week.week}
                 initial={{ opacity: 0, y: 30 }}
