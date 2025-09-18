@@ -2,10 +2,18 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Calendar, FileText } from 'lucide-react'
+import { ArrowRight, CheckCircle, Calendar, FileText, Globe, Brain, Zap, Smartphone, Layers } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import servicesData from '@/data/services.json'
+
+const iconMap = {
+  Globe,
+  Brain,
+  Zap,
+  Smartphone,
+  Layers,
+}
 
 
 export default function ServicesPageClient() {
@@ -73,19 +81,21 @@ export default function ServicesPageClient() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {servicesData.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full hover:shadow-large transition-all duration-300 group border-0 bg-white/80 backdrop-blur-sm">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-gradient-to-br from-maroon to-gold-strong rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
+            {servicesData.map((service, index) => {
+              const IconComponent = iconMap[service.icon as keyof typeof iconMap]
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full hover:shadow-large transition-all duration-300 group border-0 bg-white/80 backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="w-16 h-16 bg-gradient-to-br from-maroon to-gold-strong rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
                     <CardTitle className="text-xl font-semibold text-maroon group-hover:text-gold-strong transition-colors">
                       {service.title}
                     </CardTitle>
@@ -130,7 +140,8 @@ export default function ServicesPageClient() {
                   </CardContent>
                 </Card>
               </motion.div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
