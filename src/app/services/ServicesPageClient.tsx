@@ -121,7 +121,7 @@ export default function ServicesPageClient() {
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-musk-dark">Starting from:</span>
                           <span className="text-sm font-medium text-maroon">
-                            {service.pricing}
+                            {service.priceRange}
                           </span>
                         </div>
                       </div>
